@@ -1,0 +1,219 @@
+/* Food Donation Profile CSS */
+:root {
+    --primary-color: #4caf50;
+    --primary-dark: #388e3c;
+    --primary-light: #c8e6c9;
+    --accent-color: #ff9800;
+    --text-color: #333;
+    --text-light: #666;
+    --background-color: #f9f9f9;
+    --card-color: #fff;
+    --border-color: #e0e0e0;
+    --status-delivered: #4caf50;
+    --status-scheduled: #ff9800;
+    --status-pending: #2196f3;
+    --status-cancelled: #f44336;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .profile-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .profile-avatar {
+    margin-right: 25px;
+  }
+  
+  .profile-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-light);
+  }
+  
+  .profile-info h1 {
+    font-size: 28px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+  }
+  
+  .profile-tag {
+    display: inline-block;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .join-date {
+    color: var(--text-light);
+    font-size: 14px;
+  }
+  
+  /* Profile Content */
+  .profile-section {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+  }
+  
+  .profile-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 10px;
+  }
+  
+  /* Info Grid */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .info-item {
+    margin-bottom: 15px;
+  }
+  
+  .info-label {
+    font-weight: 600;
+    margin-right: 10px;
+    color: var(--text-light);
+  }
+  
+  .info-value {
+    color: var(--text-color);
+  }
+  
+  /* Causes Tags */
+  .causes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .cause-tag {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  /* Donation History Table */
+  .donation-history {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th {
+    text-align: left;
+    padding: 12px 15px;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-weight: 600;
+  }
+  
+  td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .status.delivered {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--status-delivered);
+  }
+  
+  .status.scheduled {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: var(--status-scheduled);
+  }
+  
+  .status.pending {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: var(--status-pending);
+  }
+  
+  .status.cancelled {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: var(--status-cancelled);
+  }
+  
+  .no-donations {
+    color: var(--text-light);
+    font-style: italic;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .profile-avatar {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    th, td {
+      padding: 8px 10px;
+    }
+    
+    .profile-section {
+      padding: 20px 15px;
+    }
+  }
